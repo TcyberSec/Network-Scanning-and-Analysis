@@ -51,6 +51,10 @@ Using the command **namp "IP Address here"**. Use your IP address from the ipcon
 This will show you basic stuff like an open port and its protocols.<br />
 
    ![nmap](image22.png)
-    
+
+- **Step 3**<br />
+If you want to see more details, type the command **nmap - A "IP Address here"**.<br />
+This scan will give you the OS, its version, script scan, and traceroute.<br />
+   ![nmap](nmap -A scan.png)
 
 
