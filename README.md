@@ -43,7 +43,14 @@ The findings of this project illustrate the importance of proactive network secu
 I prefere using the command line interface **(CLI)** rather than the Graphic User Interface **(GUI)**.
 - **Step 1**<br />
    on a Windows systems, typing **ipconfig** will display your IP Address.<br />
-   ![ipconfig](images/network_diagram.png)
+   
+   ![ipconfig](1.png)
+
+- **Step 2**<br />
+Using the command **namp "IP Address here"**. Use your IP address from the ipconfig.<br />
+This will show you basic stuff like an open port and its protocols.<br />
+
+   ![nmap](image22.png)
     
 
 
