@@ -55,6 +55,22 @@ This will show you basic stuff like an open port and its protocols.<br />
 - **Step 3**<br />
 If you want to see more details, type the command **nmap - A "IP Address here"**.<br />
 This scan will give you the OS, its version, script scan, and traceroute.<br />
-   ![nmap](nmap -A scan.png)
+
+   ![nmap](nmap-A.png)<br />
+   
+**Note**, we could type **nmap -h** to see the help page of how to use nmap and all the options we could use **(-sV, -sC, -A, etc)**. 
 
 
+
+### Wireshark
+- **Background**
+    - To truly understand network behavior, look at the raw data. That's where Wireshark comes in. This project utilizes Wireshark, a widely used network protocol analyzer, to capture and analyze network packets.
+      By examining this data, I can identify communication patterns, detect anomalies, and gain a deeper understanding of how devices interact on the network.
+      This analysis can be crucial for identifying security vulnerabilities and optimizing network performance..
+
+- **How it Works**<br />
+    - Wireshark **captures** network **packets** by putting the network interface card (NIC) into promiscuous mode, allowing it to see all traffic.
+      It then decodes the packets and displays them in a user-friendly format, showing protocol headers, data payloads, and other
+      relevant information. It uses **filters** to view only certain types of traffic and then **analyze** the communication between the different devices.
+
+#### Step by Step Process**
