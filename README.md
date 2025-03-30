@@ -42,7 +42,7 @@ The findings of this project illustrate the importance of proactive network secu
 #### Step by Step Process**
 I prefere using the command line interface **(CLI)** rather than the Graphic User Interface **(GUI)**.
 - **Step 1**<br />
-   on a Windows systems, typing **ipconfig** will display your IP Address.<br />
+   On a Windows systems, typing **ipconfig** will display your IP Address.<br />
    
    ![ipconfig](1.png)
 
@@ -74,3 +74,15 @@ This scan will give you the OS, its version, script scan, and traceroute.<br />
       relevant information. It uses **filters** to view only certain types of traffic and then **analyze** the communication between the different devices.
 
 #### Step by Step Process**
+
+- **Step 1**<br />
+   After downloading and configuring Wireshark in your system, launch it and select the network from which you want to capture packets.<br />
+   For my case, I selected the Wi-Fi network because that is how my computer was connected.
+
+  ![nmap](Image3.png)
+
+- **Step 2**<br />
+   When you select the network you want to capture packets, look for the blue symbol button located top left<br />
+   under file. Click it and let it start capturing. We can then see both the source and destination IP Addresses and also their respectives protocols.<br />
+
+   ![nmap](capturewifi.png)
