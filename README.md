@@ -65,7 +65,7 @@ This scan will give you the OS, its version, script scan, and traceroute.<br />
 ### Wireshark
 - **Background**
     - To truly understand network behavior, look at the raw data. That's where Wireshark comes in. This project utilizes Wireshark, a widely used network protocol analyzer, to capture and analyze network packets.
-      By examining this data, I can identify communication patterns, detect anomalies, and gain a deeper understanding of how devices interact on the network.
+      By examining this data, I can identify communication patterns, detect anomalies, and better understand how devices interact on the network.
       This analysis can be crucial for identifying security vulnerabilities and optimizing network performance..
 
 - **How it Works**<br />
@@ -83,6 +83,44 @@ This scan will give you the OS, its version, script scan, and traceroute.<br />
 
 - **Step 2**<br />
    When you select the network you want to capture packets, look for the blue symbol button located top left<br />
-   under file. Click it and let it start capturing. We can then see both the source and destination IP Addresses and also their respectives protocols.<br />
+   under file. Click it and let it start capturing. We can then see both the source and destination IP Addresses and also their respective protocols.<br />
 
    ![nmap](capturewifi.png)
+
+- **Step 3**<br />
+   Knowing that HTTP is not a secure protocol because it runs on port 80, I filter the network using the **Apply a display filter** <br />
+   box to filter for **HTTP traffic** running on my network, and analyze what source and destination IP Addresses they are using.<br />
+
+   ![nmap](HTTPtraffic.png)
+
+- **Step 4**<br />
+   Still with the **Apply a display filter** box, I filter for Domain Name System **(DNS)** queries.<br />
+   This shows me the domain name being resolved to troubleshoot issues like slow responses, errors, or incorrect server usage.<br />
+
+   ![nmap](DNSfilter.png)
+
+
+## Conclusion 
+
+This conclusion summarizes my findings on my Wi-Fi network while carrying out this project. Follow these steps to see if your system has any vulnerabilities. 
+
+### For Nmap
+   - I found open ports that pose a potential risk for unauthorized access. For example, port 135/tcp (msrpc), 139/tcp (netbios-ssn), 445/tcp (microsoft-ds)
+     They are associated with Windows file and printer sharing (SMB/NetBIOS) and are notorious for being targets of malware and exploits, such as WannaCry.
+   - Also, with Nmap -A for aggressive scan, I could use this option to detect what OS I was using. 
+
+#### Likes and dislikes 
+   - Nmap is a good tool because it is powerful and versatile, with a wide range of scanning options. It is excellent for host discovery and service identification.
+     The downside of Nmap is that the command-line interface (CLI) can sometimes be intimidating for beginners. I am speaking from experience.
+     Another downside is that IDS can also detect some scans. 
+
+### For Wireshark
+   - With the detailed filtering of DNS and HTTP, I was able to reveal websites that I have visited that are not secure, as well as the domain name resolution. 
+
+   - The exciting part is that one can see traffic in real time and identify its source and destination IP addresses. 
+
+#### Likes and dislikes 
+
+   - I like the fact that Wireshark is a highly detailed packet analyzer. It is a user-friendly GUI with powerful filtering capabilities
+     and open-source software, and it is well documented. The downside about it is that, when capturing large amounts of traffic, it can generate huge files
+     It also requires one to have extensive knowledge of protocols. It can also be resource-intensive. 
